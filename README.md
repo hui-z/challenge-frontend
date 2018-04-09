@@ -47,7 +47,7 @@ Main
 
 ### Bonus
 
-- Write clear **documentation** on how it's designed and how to run the code.
+- Write clear **documentation** how to run the code.
 - An online demo is always welcome.
 
 ## Q&A
