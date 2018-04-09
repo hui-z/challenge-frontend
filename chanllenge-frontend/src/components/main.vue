@@ -22,20 +22,8 @@
         <button>导出</button>
       </div>
     </div>
-    <div class="overall card" id="overall">
-      <div class="overall-top">
-        <span>交易汇总</span>
-        <span>(交易时段 {{dateFrom}} - {{dateTo}})</span>
-      </div>
-      <div class="overall-under">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-      </div>
-    </div>
-    <div class="detail-card"></div>
+    <overall></overall>
+    <detail></detail>
   </div>
 </template>
 
@@ -44,13 +32,18 @@
 </style>
 
 <script>
+  import overall from './overall.vue'
+  import detail from './detail.vue'
   export default {
     name: 'main-part',
     data () {
       return {
-        dateFrom: '2018.01.02',
-        dateTo: '2018.01.03'
+
       }
+    },
+    components: {
+      'overall': overall,
+      'detail': detail
     }
   }
 </script>
