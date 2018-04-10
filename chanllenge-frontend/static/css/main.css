@@ -1,0 +1,184 @@
+.header {
+    height: 60px;
+    background-color: #fff;
+    margin: 3px 5px;
+    box-shadow: 0 0 6px #cdcdcd;
+}
+
+.header > div {
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    color: #636976;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.tea-room-border {
+    padding-left: 10px;
+    border-left: 1px #F2F2F2 solid;
+}
+
+.search {
+    position: relative;
+    padding: 0 0 0 20px;
+    margin: 35px 30px;
+}
+
+.query-btn {
+    margin: 20px;
+}
+
+.query-btn button {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    width: 90px;
+    height: 35px;
+    background-color: #79A5FF;
+}
+
+.query-btn button:hover {
+    background-color: #64A5FF;
+}
+
+.query-btn button:first-child {
+    margin: 0 8px 0 0;
+}
+
+.query-btn button:last-child {
+    margin: 0 0 0 8px;
+}
+
+.query-input {
+    color: #91949B;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+    margin: auto 0;
+}
+
+.date-input {
+    margin-left: 100px;
+    display: inline-block;
+}
+
+.date-input > div {
+    position: relative;
+    display: inline-block;
+}
+
+.cancel {
+    display: none;
+    position: absolute;
+    top: -2px;
+    right: 25px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/cancel.png") no-repeat center;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.cancel.active {
+  display: block;
+}
+
+.triangle {
+    display: none;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    width: 11px;
+    height: 11px;
+    background: url("../img/triangle.png") no-repeat center;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.triangle.active {
+  display: block;
+}
+
+.date-input span {
+    margin: 0 10px;
+}
+
+.date-input input {
+    position: relative;
+    font-size: 15px;
+    color: #4E515A;
+    width: 135px;
+    border: none;
+    outline: none;
+    padding: 0 0 5px 5px;
+    border-bottom: 1px #E9E9EB solid;
+}
+
+.overall {
+    transition: all .3s cubic-bezier(0, 0, 0, .99);
+    overflow: hidden;
+    margin: 0 30px;
+}
+
+.overall-top {
+    cursor: pointer;
+    color: #91949B;
+    padding: 0 0 0 20px;
+    line-height: 45px;
+    background-color: #F8F8FA;
+}
+
+.overall-top span:first-child{
+    color: #636976;
+    margin: 0 5px 0 0;
+}
+
+.overall-under {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    text-align: center;
+}
+
+.overall-under > div:first-child,
+.overall-under > div:last-child,
+.overall-under > div:nth-child(3) {
+    width: 20%;
+}
+
+.overall-under > div:nth-child(2),
+.overall-under > div:nth-child(4) {
+    width: 30%;
+}
+
+.overall-under > div {
+  border-bottom: 1px #E8E8EA solid;
+  padding-top: 20px;
+}
+.overall-under > div:not(:last-child) {
+    border-right: 1px #E8E8EA solid;
+}
+
+.overall-under > div > span {
+    display: block;
+}
+
+.overall-under > div > span:first-child {
+  font-size: 14px;
+  color: #717276;
+  margin: 0 0 10px 0;
+}
+
+.overall-under > div > span:nth-child(2) {
+  font-size: 22px;
+  color: #5E6872;
+  margin: 0 0 10px 0;
+}
+
+.overall-under > div > span:nth-child(3) {
+  margin: 0 0 10px 0;
+  color: #EE9F64;
+}
