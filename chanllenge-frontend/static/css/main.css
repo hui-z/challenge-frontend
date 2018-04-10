@@ -71,6 +71,7 @@
 }
 
 .cancel {
+    display: none;
     position: absolute;
     top: -2px;
     right: 25px;
@@ -81,7 +82,12 @@
     cursor: pointer;
 }
 
+.cancel.active {
+  display: block;
+}
+
 .triangle {
+    display: none;
     position: absolute;
     top: 3px;
     right: 5px;
@@ -91,6 +97,11 @@
     background-size: 100%;
     cursor: pointer;
 }
+
+.triangle.active {
+  display: block;
+}
+
 .date-input span {
     margin: 0 10px;
 }
