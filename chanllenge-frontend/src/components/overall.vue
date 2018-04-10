@@ -20,12 +20,12 @@
       <div>
         <span>支付金额&nbsp;(元)</span>
         <span>{{totalPay | toFixed}}</span>
-        <span>{{earse | toFixed}}</span>
+        <span>抹零{{earse | toFixed}}元</span>
       </div>
       <div>
         <span>清算金额&nbsp;(元)</span>
         <span>{{liquidation | toFixed}}</span>
-        <span>{{serviceCharge | toFixed}}</span>
+        <span>手续费{{serviceCharge | toFixed}}</span>
       </div>
     </div>
     <div class="overall-under">
