@@ -1,21 +1,23 @@
 # chanllenge-frontend
 
-> A Vue.js project
+> this is a chanllenge-frontend project
 
-## Build Setup
+## install npm
 
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+##how to run the code?
+```
+#first
+   cd chanllenge-frontend
+
+#then 
+   npm run dev
+
+
+#and then you can visit in localhost:8080
+```

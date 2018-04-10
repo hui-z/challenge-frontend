@@ -63,28 +63,28 @@
                 <span>{{item.singleTradeNumber}}</span>
               </td>
               <td>
-                <span>{{item.consumeNumber}}</span>
+                <span>{{item.consumeNumber | toFixed}}</span>
               </td>
               <td>
-                <span>{{item.integralDeduct}}</span>
+                <span>{{item.integralDeduct | toFixed}}</span>
               </td>
               <td>
-                <span>{{item.storageDeduct}}</span>
+                <span>{{item.storageDeduct | toFixed}}</span>
               </td>
               <td>
-                <span>{{item.discountCash}}</span>
+                <span>{{item.discountCash | toFixed}}</span>
               </td>
               <td>
-                <span>{{item.earseSmallCash}}</span>
+                <span>{{item.earseSmallCash | toFixed}}</span>
               </td>
               <td>
-                <span>{{item.payCash}}</span>
+                <span>{{item.payCash | toFixed}}</span>
               </td>
               <td>
-                <span>{{item.serviceCharge}}</span>
+                <span>{{item.serviceCharge | toFixed}}</span>
               </td>
               <td>
-                <span>{{item.amountOfLiquidation}}</span>
+                <span>{{item.amountOfLiquidation | toFixed}}</span>
               </td>
               <td class="check-details">
                 <span @click="clickToCheck(index, item)">查看明细</span>
@@ -101,28 +101,28 @@
                 <span>{{innerItem.moreSingleTradeNumber}}</span>
               </td>
               <td>
-                <span>{{innerItem.moreConsumeNumber}}</span>
+                <span>{{innerItem.moreConsumeNumber | toFixed}}</span>
               </td>
               <td>
-                <span>{{innerItem.moreIntegralDeduct}}</span>
+                <span>{{innerItem.moreIntegralDeduct | toFixed}}</span>
               </td>
               <td>
-                <span>{{innerItem.moreStorageDeduct}}</span>
+                <span>{{innerItem.moreStorageDeduct | toFixed}}</span>
               </td>
               <td>
-                <span>{{innerItem.moreDiscountCash}}</span>
+                <span>{{innerItem.moreDiscountCash | toFixed}}</span>
               </td>
               <td>
-                <span>{{innerItem.moreEarseSmallCash}}</span>
+                <span>{{innerItem.moreEarseSmallCash | toFixed}}</span>
               </td>
               <td>
-                <span>{{innerItem.morePayCash}}</span>
+                <span>{{innerItem.morePayCash | toFixed}}</span>
               </td>
               <td>
-                <span>{{innerItem.moreServiceCharge}}</span>
+                <span>{{innerItem.moreServiceCharge | toFixed}}</span>
               </td>
               <td>
-                <span>{{innerItem.moreAmountOfLiquidation}}</span>
+                <span>{{innerItem.moreAmountOfLiquidation | toFixed}}</span>
               </td>
               <td></td>
             </tr>
@@ -451,6 +451,10 @@ export default {
   }
   .td-tr span {
     display: block;
+  }
+
+  .td-tr span:first-child {
+    transform: translateY(-8px);
   }
 
   .check-details {

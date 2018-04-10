@@ -5,13 +5,14 @@
         <span>交易日期：</span>
         <div class="date-input" id="date-input">
           <div @mouseenter="enterIn(0)" @mouseleave="leaveOut(0)">
-            <input type="text" id="input-from">
+            <!--此处曾考虑用v-model，但在触发mouseenter时会导致input内容为空，暂未找到方法，导致X图标消失只能先用setInterval比较笨的方法替代-->
+            <input type="text" id="input-from" @blur="startInterval(0)">
             <i class="cancel" @click="cancelValue('input-from')" :class="cancelFirst.isShow ? 'active' : ''"></i>
             <i class="triangle" :class="triangleFirst.isShow ? 'active' : ''"></i>
           </div>
           <span>至</span>
           <div @mouseenter="enterIn(1)" @mouseleave="leaveOut(1)">
-            <input type="text" id="input-to">
+            <input type="text" id="input-to" @blur="startInterval(1)">
             <i class="cancel" @click="cancelValue('input-to')" :class="cancelSecond.isShow ? 'active' : ''"></i>
             <i class="triangle" :class="triangleSecond.isShow ? 'active' : ''"></i>
           </div>
@@ -37,7 +38,6 @@
     name: 'main-part',
     data () {
       return {
-        first:'',
         triangleFirst: {
           isShow: false
         },
@@ -45,10 +45,10 @@
           isShow: false
         },
         cancelFirst: {
-          isShow: true
+          isShow: false
         },
         cancelSecond: {
-          isShow: true
+          isShow: false
         }
       }
     },
@@ -57,13 +57,34 @@
       'detail': detail
     },
     methods: {
+      startInterval: function (num) {
+        switch (num) {
+          case 0:
+            setInterval(() => {
+              console.log(document.getElementById('input-from').value);
+              if (document.getElementById('input-from').value !== '') {
+                this.cancelFirst.isShow = true;
+              }
+            },100);
+            break;
+          case 1:
+            setInterval(() => {
+              console.log(document.getElementById('input-from').value);
+              if (document.getElementById('input-to').value !== '') {
+                this.cancelSecond.isShow = true;
+              }
+            },100);
+            break;
+        }
+      },
       cancelValue: function (id) {
         document.getElementById(id).value = '';
         if (id = 'input-from') {
           this.cancelFirst.isShow = false;
-          return
         }
-        this.cancelSecond.isShow = false
+        if (id = 'input-to') {
+          this.cancelSecond.isShow = false
+        }
       },
       enterIn: function (num) {
         switch (num) {
@@ -88,8 +109,6 @@
       check: function () {
         const inputFrom = document.getElementById('input-from').value;
         const inputTo = document.getElementById('input-to').value;
-        //保存一份副本
-
         //空数组
         let rangeArr = [];
         //输入的时间有始有终的情况下
@@ -136,6 +155,7 @@
           });
           //改变显示
           this.$children[1].detail = rangeArr
+
 
 
           //两边都为空，默认展示全部

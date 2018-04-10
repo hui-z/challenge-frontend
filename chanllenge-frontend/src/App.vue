@@ -8,13 +8,14 @@
 <script>
   import header from './components/header.vue'
   import main from './components/main.vue'
-export default {
-  name: 'App',
-  components: {
-    'header-common': header,
-    'main-part': main
+
+  export default {
+    name: 'App',
+    components: {
+      'header-common': header,
+      'main-part': main
+    }
   }
-}
 </script>
 
 <style>

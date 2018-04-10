@@ -7,25 +7,25 @@
     <div class="overall-under">
       <div>
         <span>消费金额&nbsp;(元)</span>
-        <span>560.00</span>
+        <span>{{totalCash | toFixed}}</span>
       </div>
       <div>
         <span>抵扣金额&nbsp;(元)</span>
-        <span>10.00</span>
+        <span>{{totalDeductible | toFixed}}</span>
       </div>
       <div>
         <span>优惠金额&nbsp;(元)</span>
-        <span>10.00</span>
+        <span>{{totalDiscount | toFixed}}</span>
       </div>
       <div>
         <span>支付金额&nbsp;(元)</span>
-        <span>538.00</span>
-        <span>抹零2.00元</span>
+        <span>{{totalPay | toFixed}}</span>
+        <span>{{earse | toFixed}}</span>
       </div>
       <div>
         <span>清算金额&nbsp;(元)</span>
-        <span>536.00</span>
-        <span>手续费2.00元</span>
+        <span>{{liquidation | toFixed}}</span>
+        <span>{{serviceCharge | toFixed}}</span>
       </div>
     </div>
     <div class="overall-under">
@@ -34,7 +34,7 @@
         <table class="overall-table-in">
           <tr v-for="item in deductibleInfo">
             <td>{{item.deductName}}</td>
-            <td>{{item.deductPrice}}</td>
+            <td>{{item.deductPrice | toFixed}}</td>
           </tr>
         </table>
       </div>
@@ -43,7 +43,7 @@
         <table class="overall-table-in">
           <tr v-for="item in paymentInfo">
             <td>{{item.paymentApp}}</td>
-            <td>{{item.paymentPrice}}</td>
+            <td>{{item.paymentPrice | toFixed}}</td>
           </tr>
         </table>
       </div>
@@ -60,6 +60,13 @@ export default {
         dateFrom: '2018.01.02',
         dateTo: '2018.01.03',
         isHide: true,
+        totalCash: 560.00,
+        totalDeductible: 10.00,
+        totalDiscount: 10.00,
+        totalPay: 538.00,
+        liquidation: 536.00,
+        earse: 2.00,
+        serviceCharge: 2.00,
         deductibleInfo: [{
           deductName: '积分抵扣',
           deductPrice: 300.00
