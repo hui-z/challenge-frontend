@@ -10,7 +10,7 @@ npm install
 
 ```
 
-##how to run the code?
+## how to run the code?
 ```
 #first
    cd chanllenge-frontend
